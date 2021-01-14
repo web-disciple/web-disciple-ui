@@ -13,6 +13,14 @@ class Team extends JetstreamTeam
     use HasFactory;
 
     /**
+     * Get the pages for the project.
+     */
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array

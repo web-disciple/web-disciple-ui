@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->string('slug')->unique();
+            $table->foreignId('team_id')->constrained();
             $table->timestamps();
         });
     }
